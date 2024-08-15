@@ -1,6 +1,6 @@
-## NUMBER GUESSING GAME
+# NUMBER GUESSING GAME
 
-# Welcome to the **Number Guessing Game**, a fun interactive Python program where a player tries to guess a random number in the range of 1 to 100.
+### Welcome to the **Number Guessing Game**, a fun interactive Python program where a player tries to guess a random number in the range of 1 to 100.
 
 # Getting started
 
