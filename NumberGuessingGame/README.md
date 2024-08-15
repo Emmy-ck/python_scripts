@@ -48,3 +48,9 @@ Too high.
 You have 7 attempts remaining to guess the number.
 Make a guess: 30
 Congratulations! You guessed the number 30 correctly!
+
+```
+## Author
+Created by [(https://github.com/Emmy-ck)]
+
+Enjoy the game ad have fun guessing! ![alt text](image.png)
