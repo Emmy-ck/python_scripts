@@ -8,6 +8,7 @@ cards = [11,2,3,4,5,6,7,8,9,10,10,10,10]
 player_cards = random.sample(cards,2)
 computer_cards = random.sample(cards,2)
 
+# Creating global variables for the total points each player has
 player_total = sum(player_cards)
 comp_total = sum(computer_cards)
 
