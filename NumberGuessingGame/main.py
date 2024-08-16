@@ -15,14 +15,37 @@ def scale(player_choice, comp_choice):
     Returns:
         str: A message indicating whether the guess is too high, too low, or correct.
     """
-    if player_choice == comp_choice:
-        print (f'CONGRATULATIONS! You guessed {comp_choice} correct!')
-    elif player_choice < comp_choice:
-        print ('Too low!')
+    if (player_choice in range(1,101)) and (comp_choice in range(1,101)):
+        if player_choice == comp_choice:
+            print (f'CONGRATULATIONS! You guessed {comp_choice} correct!')
+        elif player_choice < comp_choice:
+            print ('Too low!')
+        else:
+            print ('Too high!')
     else:
-        print ('Too high!')
+        print("Invalid choice! Number out of range.")
 
-scale(player_choice=int,comp_choice=int)
+scale(player_choice,comp_choice)
 
-print(f"Computer choice is {comp_choice}")
-print(f'Your choice is {player_choice}')
+# print(f"Computer choice is {comp_choice}")
+# print(f'Your choice is {player_choice}')
+
+attempts = 0
+level = str(input("Pick a level. Type 'easy' or 'hard': ").lower())
+
+# Prompts the user to type the level accurately
+while (level != 'easy') and (level != 'hard'):
+    print("Invalid input. Try again")
+    level = str(input("Pick a level. Type 'easy' or 'hard': ").lower())
+    if (level == 'easy') or (level == 'hard'):
+        break
+
+if level == 'easy':
+    attempts = 10
+    print(f"\t\t\tEasy level. \n\tYou have {attempts} attempts to guess the correcct number.\n\t\t\tALL THE BEST!")
+else:
+    attempts = 5
+    print(f"\t\t\tHard level. \n\tYou have {attempts} attempts to guess the correct number.\n\t\t\tALL THE BEST!")
+
+
+    
