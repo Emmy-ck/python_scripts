@@ -20,7 +20,7 @@ while (prompt != 'y') and (prompt != 'n'):
 
 # Generate computer's random choice between 1 and 100
 comp_choice = int(random.randint(1, 101))
-# print(f"Computer choice is {comp_choice}") # For debugging purposes
+print(f"Computer choice is {comp_choice}") # For debugging purposes
 
 # Define the main game function
 def guess_the_number():
@@ -55,6 +55,8 @@ def guess_the_number():
 
         # Start the guessing loop
         while True:
+            if attempts <= 0:
+                break
             player_choice = int(input("Pick a number between 1 and 100: "))
             if (player_choice in range(1,101)) and (comp_choice in range(1,101)):
                 while player_choice != comp_choice:
@@ -74,7 +76,6 @@ def guess_the_number():
                     break
             else:
                 print("Invalid choice! Number out of range.")
-                player_choice = int(input("Pick another number: "))
     return # Exit the function after the game ends
 
 # Start the game by calling the name function
